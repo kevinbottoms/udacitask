@@ -27,6 +27,21 @@ class TodoList
       @title = new_title
     end
 
+    def set_due_date(item, date)
+      self.items[item - 1].set_due_date(date)
+    end
+
+    def important(item)
+      self.items[item - 1].important
+    end
+
+    def clear_list
+      counter = 0
+      while counter < self.items.length
+        self.items.delete_at(0)
+      end
+    end
+
     def print_todo_list
       dashes = "-" * self.title.length
       puts dashes
@@ -34,20 +49,38 @@ class TodoList
       puts dashes
       line_number = 1
       self.items.each do |item|
-        item_string = "#{line_number} - #{item.description} ".ljust(30)
-        completed_string = "Completed: #{item.completed_status}\n"
-        printf item_string + completed_string
-        line_number += 1
+        if item.important == false
+          item_string = "#{line_number} - !#{item.description}! ".ljust(30)
+          completed_string = "Completed: #{item.completed_status}".ljust(30)
+          date_string = "Due Date: #{item.due_date}\n"
+          printf item_string + completed_string + date_string
+          line_number += 1
+        else
+          item_string = "#{line_number} - #{item.description} ".ljust(30)
+          completed_string = "Completed: #{item.completed_status}".ljust(30)
+          date_string = "Due Date: #{item.due_date}\n"
+          printf item_string + completed_string + date_string
+          line_number += 1
+        end
       end
     end
 end
 
 class Item
-    attr_reader :description, :completed_status
+    attr_reader :description, :completed_status, :due_date, :important
 
     def initialize(item_description)
       @description = item_description
       @completed_status = false
+      @important = false
+    end
+
+    def set_due_date(date)
+      @due_date = date
+    end
+
+    def important
+      @important = true
     end
 
     def complete

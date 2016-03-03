@@ -1,0 +1,5 @@
+Feature #1: Added a due date to the Item class and methods to set it as well. The due date is shown in the print out of the TodoList object.
+
+Feature #2: Added a :important attibute to the Item class that is automatically set to false. When it is changed to true it changes the output to show that particular item is important.
+
+Feature #3: Added a function to the TodoList class that deletes all items but keeps the list available so new items can be added.
