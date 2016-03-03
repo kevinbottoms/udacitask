@@ -13,17 +13,25 @@ list.add_item "Feed the Cat"
 list.print_todo_list
 
 # Delete the first item
+list.delete_item 1
 
 # Print the list
+list.print_todo_list
 
 # Delete the second item
+list.delete_item 2
 
 # Print the list
+list.print_todo_list
 
 # Update the completion status of the first item to complete
+list.complete 1
 
 # Print the list
+list.print_todo_list
 
 # Update the title of the list
+list.update_title "Important! Finish Soon!"
 
 # Print the list
+list.print_todo_list

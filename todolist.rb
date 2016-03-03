@@ -11,6 +11,22 @@ class TodoList
       @items.push(item)
     end
 
+    def delete_item(item)
+      self.items.delete_at(item - 1)
+    end
+
+    def complete(item)
+      self.items[item - 1].complete
+    end
+
+    def not_complete(item)
+      self.items[item - 1].not_complete
+    end
+
+    def update_title(new_title)
+      @title = new_title
+    end
+
     def print_todo_list
       dashes = "-" * self.title.length
       puts dashes
@@ -31,6 +47,14 @@ class Item
 
     def initialize(item_description)
       @description = item_description
+      @completed_status = false
+    end
+
+    def complete
+      @completed_status = true
+    end
+
+    def not_complete
       @completed_status = false
     end
 end
