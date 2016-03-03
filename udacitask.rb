@@ -1,10 +1,16 @@
 require_relative 'todolist.rb'
 
 # Creates a new todo list
+list = TodoList.new "Kevin's To Do List"
 
 # Add four new items
+list.add_item "Learn about Classes"
+list.add_item "Do the Next Project"
+list.add_item "Pet the Cat"
+list.add_item "Feed the Cat"
 
 # Print the list
+list.print_todo_list
 
 # Delete the first item
 
