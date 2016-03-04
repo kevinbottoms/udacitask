@@ -1,0 +1,68 @@
+commit 5bcc569bef46161215c6af87ea6853eab1e5a1c0
+Author: Kevin Bottoms <webdev@kevinbottoms.com>
+Date:   Thu Mar 3 21:30:49 2016 +0100
+
+    Added new_features.txt
+    Added Due Date to Item and TodoList Classes
+    Added Important to Item and TodoList Classes
+    Added clear_list to TodoList Class
+    
+    On branch master
+    Changes to be committed:
+    new file:   new_features.txt
+    modified:   todolist.rb
+    
+    Untracked files:
+    .DS_Store
+
+commit cb33e4fdc41f04f9e6afa851dc2d86565f8c5085
+Author: Kevin Bottoms <webdev@kevinbottoms.com>
+Date:   Thu Mar 3 20:11:42 2016 +0100
+
+    Added to TodoList class
+      -delete_item
+      -complete
+      -not_complete
+      -update_title
+    
+    Added to Item class
+      -complete
+      -not_complete
+    
+    On branch master
+    Changes to be committed:
+    modified:   todolist.rb
+    modified:   udacitask.rb
+
+commit 95cae2b99eedaa45c2fb35eb8e009e93c52ff979
+Author: Kevin Bottoms <webdev@kevinbottoms.com>
+Date:   Thu Mar 3 19:36:56 2016 +0100
+
+    Created TodoList class
+    Created Item class
+    
+    Added following methods to TodoList:
+      -initialize
+      -add_item
+      -print_todo_list
+    
+    Added following method to Item
+      -initialize
+    
+    Added code to udacitask.rb to test new classes and methods
+    
+    On branch master
+    Changes to be committed:
+    modified:   todolist.rb
+    modified:   udacitask.rb
+
+commit 89ddb411dbb42d50484c055939efd55f2ed74413
+Author: Kevin Bottoms <webdev@kevinbottoms.com>
+Date:   Thu Mar 3 16:42:00 2016 +0100
+
+    Initial commit
+    
+    Changes to be committed:
+    new file:   README.md
+    new file:   todolist.rb
+    new file:   udacitask.rb

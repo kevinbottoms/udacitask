@@ -28,11 +28,15 @@ class TodoList
     end
 
     def set_due_date(item, date)
-      self.items[item - 1].set_due_date(date)
+      self.items[item - 1].item_due_date(date)
     end
 
-    def important(item)
-      self.items[item - 1].important
+    def set_important(item)
+      self.items[item - 1].mark_important
+    end
+
+    def is_complete?(item)
+      self.items[item - 1].is_complete?
     end
 
     def clear_list
@@ -49,7 +53,7 @@ class TodoList
       puts dashes
       line_number = 1
       self.items.each do |item|
-        if item.important == false
+        if item.important == true
           item_string = "#{line_number} - !#{item.description}! ".ljust(30)
           completed_string = "Completed: #{item.completed_status}".ljust(30)
           date_string = "Due Date: #{item.due_date}\n"
@@ -72,14 +76,15 @@ class Item
     def initialize(item_description)
       @description = item_description
       @completed_status = false
+      @due_date = ""
       @important = false
     end
 
-    def set_due_date(date)
+    def item_due_date(date)
       @due_date = date
     end
 
-    def important
+    def mark_important
       @important = true
     end
 
@@ -89,5 +94,9 @@ class Item
 
     def not_complete
       @completed_status = false
+    end
+
+    def is_complete?
+      @completed_status
     end
 end

@@ -35,3 +35,25 @@ list.update_title "Important! Finish Soon!"
 
 # Print the list
 list.print_todo_list
+
+# Find out if list item is complete using is_complete?
+puts "\n\tItem 1 complete: #{list.is_complete? 1}\n\n"
+puts "\n\tItem 2 complete: #{list.is_complete? 2}\n\n"
+
+# Set due date
+list.set_due_date 1, "July 19"
+
+# Print the list
+list.print_todo_list
+
+# Set important
+list.set_important 1
+
+#Print the list
+list.print_todo_list
+
+# Call clear_list method
+list.clear_list
+
+#Print the list
+list.print_todo_list
